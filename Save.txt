@@ -1,0 +1,49 @@
+
+Start Time:2021-05-24T16:57:26.308137400Z
+Player names and figures : wer
+Winner is: wer
+ Steps of all players:5
+Start Time:2021-05-24T16:57:26.308137400Z
+Player names and figures : wer
+Winner is: wer
+ Steps of all players:5
+Start Time:22:33:58.535429250
+Player names : w
+Winner is: w
+Steps of all players:5
+Start Time:22:33:58.535429250
+Player names : e
+Winner is: w
+Steps of all players:5
+Start Time:22:38:04.770220030
+Player names : abdul
+Winner is: abdul
+Steps of all players:5
+Start Time:22:38:04.770220030
+Player names : nura
+Winner is: abdul
+Steps of all players:5
+Start Time:22:50:33.322466054
+Player names : rew
+Winner is: rew
+Steps of all players:5
+Start Time:22:50:33.322466054
+Player names : s
+Winner is: rew
+Steps of all players:5
+Start Time:23:33:03.519409623
+Player names : abdul
+Winner is: abdul
+Steps of all players:5
+Start Time:23:33:03.519409623
+Player names : nura
+Winner is: abdul
+Steps of all players:5
+Start Time:23:39:10.807442007
+Player names : wert
+Winner is: wert
+Steps of all players:5
+Start Time:23:39:10.807442007
+Player names : trew
+Winner is: wert
+Steps of all players:5
