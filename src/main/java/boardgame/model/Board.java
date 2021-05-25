@@ -59,6 +59,9 @@ public class Board {
         }
     }
 
+    /**
+     * @return figures
+     */
     public Figure[][] getFiguresArray() {
         return figures;
     }

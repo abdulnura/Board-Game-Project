@@ -31,9 +31,19 @@ public interface GameDao {
     @SqlQuery("SELECT * FROM game ORDER BY winner_score DESC limit 5")
     List<Game> getTopFiveGames();
 
+    /**
+     * Checks if player exist in the Database.
+     * @param winner if the player won a game.
+     * @return if true.
+     */
     @SqlQuery("SELECT * from game where winner = :winner")
     Game checkIfPlayerExist(@Bind("winner") String winner);
 
+    /**
+     * Updates the player score only if the player exists based on the player name or id.
+     * @param id id of the player.
+     * @param newScore the new score.
+     */
     @SqlUpdate("update game set winner_score = :newScore where winner = :winnerName")
     void updatePlayerScore(@Bind("winnerName") String id, @Bind("newScore") int newScore);
 }

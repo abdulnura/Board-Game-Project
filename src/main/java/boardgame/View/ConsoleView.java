@@ -11,7 +11,6 @@ import lombok.*;
 import org.tinylog.Logger;
 
 
-import java.io.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.InputMismatchException;
@@ -19,11 +18,14 @@ import java.util.List;
 import java.util.Scanner;
 
 
+/**
+ *
+ *   The console view class.
+ *
+ */
 @Data
 
-/**
- * THe console view class
- */
+
 public class ConsoleView implements View {
     private static final String CHARACTER_HYPHEN = "-";
 
@@ -31,18 +33,31 @@ public class ConsoleView implements View {
 
     private static final String INPUT_ERROR = "Incorrect input, please try again";
 
+    /**
+     * Protected methods from Board game controller class to not exposing its members to the public.
+     */
     protected final BoardGameController game;
+    /**
+     * Used to count the steps of players.
+     */
     public int count = 0;
+    /**
+     * Used to set the scores of players.
+     */
     public int score = 0;
+    /**
+     * Used to mark the start time of the game.
+     */
     private static LocalTime startTime;
+    /**
+     * Indicates the names of players.
+     */
     private String name;
-    private String Player1;
-    private String Player2;
 
     /**
-     * The console view
+     * The console view.
      *
-     * @param game a new game
+     * @param game .
      */
     public ConsoleView(final BoardGameController game) {
         assert game != null;
@@ -52,16 +67,16 @@ public class ConsoleView implements View {
     /**
      * Gets the game controller and
      *
-     * @return the game
+     * @return the game.
      */
     public BoardGameController getBoardGameController() {
         return game;
     }
 
     /**
-     * At the start of the game it will indicate the turns
+     * At the start of the game it will indicate the turns.
      *
-     * @return the new points / coordinates
+     * @return the new points or coordinates.
      */
     public Point startTurn() {
         startTime = LocalTime.now();
@@ -75,14 +90,7 @@ public class ConsoleView implements View {
     }
 
     /**
-     * Shows Game name on console
-     */
-    public void showGameName() {
-        System.out.println(game.getGameName());
-    }
-
-    /**
-     * shows each player, name and figure
+     * Shows each player, name and figure.
      */
     public void showPlayers() {
         for (Player player : game.getPlayers()) {
@@ -91,7 +99,7 @@ public class ConsoleView implements View {
     }
 
     /**
-     * this shows the board on the console
+     * This shows the board on the console.
      */
     public void showBoard() {
         int lineSize = game.getBoard().getFiguresArray().length;
@@ -102,7 +110,7 @@ public class ConsoleView implements View {
     }
 
     /**
-     * Shows winners name , figure , score and steps taken by both players
+     * Shows winners name , figure , score and steps taken by both players.
      */
     public void showWinner() {
 
@@ -162,6 +170,7 @@ public class ConsoleView implements View {
                     break;
                 case "n":
                     System.out.println("Exit...");
+                    Logger.info("Game Ended");
                     System.exit(0);
 
                     break;

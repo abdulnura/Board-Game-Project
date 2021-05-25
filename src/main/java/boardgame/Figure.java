@@ -1,7 +1,19 @@
 package boardgame;
 
+/**
+ * This is the figure class used to get and assign figures to the players
+ */
 public enum Figure {
-    X("X"), O("O");
+
+    /**
+     * The X figure.
+     */
+    X("X"),
+
+    /**
+*The O figure.
+*/
+ O("O");
 
     private final String figure;
 

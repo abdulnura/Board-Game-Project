@@ -6,6 +6,10 @@ import boardgame.exceptions.PointOccupiedException;
 import boardgame.Figure;
 import boardgame.Player;
 
+/**
+ * This is the Game Controller
+ * It holds the rules of the game
+ */
 public class BoardGameController {
 
     private static final String Game_Name = "Board Game";
@@ -20,8 +24,13 @@ public class BoardGameController {
     private final int boardLength;
 
 
-
-    public BoardGameController(final String gameName, final Player[] players, final Board board, int steps) {
+    /**
+     * The board game controller checks if the game name is null, if not assign the following:
+     * @param gameName Game Name.
+     * @param players  Players.
+     * @param board    Board.
+     */
+    public BoardGameController(final String gameName, final Player[] players, final Board board) {
         if (gameName == null || gameName.isEmpty()) {
             this.gameName = Game_Name;
 

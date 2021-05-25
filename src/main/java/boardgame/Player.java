@@ -1,6 +1,6 @@
 package boardgame;
 
-import boardgame.helper.JAXBHelper;
+
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
@@ -8,41 +8,34 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 
-
+/**
+ *
+ *    This the player class.
+ *    its gets the players attributes.
+ *
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @XmlAccessorType
 @XmlRootElement
 @XmlType(propOrder = {"name", "figure", "score", "startTime"})
-public class Player {
 
-    public static Object main;
+
+   public class Player {
+
     private String name;
     private Figure figure;
     private int score;
     private int startTime;
 
-    public static void main(String[] args) throws Exception {
-        Player player = new Player();
 
-        Player Player;
-        Player = new boardgame.Player();
-        Player.setName(player.name);
-        Player.setFigure(Player.figure);
-        Player.setScore(player.score);
-        Player.setStartTime(player.startTime);
-        JAXBHelper.toXML(Player, System.out);
-        JAXBHelper.toXML(Player, new FileOutputStream("Save.txt"));
-        System.out.println(JAXBHelper.fromXML(Player.class, new FileInputStream("Player.xml")));
-
-
-    }
-
-
+    /**
+     * Used to assert unexpected boolean
+     * @param name name
+     * @param figure figure
+     */
     public Player(final String name, final Figure figure) {
         assert name != null;
         assert figure != null;

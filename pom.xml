@@ -5,6 +5,11 @@
     <groupId>hu.unideb.inf</groupId>
     <artifactId>Board-Game-Project</artifactId>
     <version>1.0</version>
+    <description>The Board Game on Console.</description>
+    <scm>
+        <connection>scm:git:https://github.com/abdulnura/Board-Game-Project.git</connection>
+        <developerConnection>scm:https://github.com/abdulnura/Board-Game-Project.git</developerConnection>
+    </scm>
     <packaging>jar</packaging>
     <developers>
         <developer>
@@ -228,9 +233,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
-                <version>3.9.0</version>
+                <version>3.9.1</version>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
     <reporting>
         <plugins>
@@ -246,6 +257,13 @@
                     </reportSet>
                 </reportSets>
             </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <configuration>
+                        <additionalOptions>-Xdoclint:none</additionalOptions>
+                    </configuration>
+                </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>

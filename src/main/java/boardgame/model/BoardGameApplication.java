@@ -30,7 +30,7 @@ public class BoardGameApplication {
         players[0] = new Player(playerOneName, Figure.X);
         players[1] = new Player(playerTwoName, Figure.O);
         int steps = 0;
-        final BoardGameController gameController = new BoardGameController(gameName, players, board, steps);
+        final BoardGameController gameController = new BoardGameController(gameName, players, board);
         final ConsoleView consoleView = new ConsoleView(gameController);
         final BoardGameModel game = new BoardGameModel(consoleView);
         consoleView.showPlayers();

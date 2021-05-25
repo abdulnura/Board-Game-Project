@@ -7,9 +7,12 @@ import org.jdbi.v3.sqlobject.SqlObjectPlugin;
 import org.tinylog.Logger;
 
 
+/**
+ * This is the database class for storing files or result to the database
+ */
 public class Database {
     /**
-     * {@see org.jdbi.v3.core.Jdbi} instance for establishing connection to a remote SQL database.
+     *  instance for establishing connection to a remote SQL database.
      */
     public static Jdbi jdbi = Jdbi.create(
             "jdbc:postgresql://batyr.db.elephantsql.com:5432/",
@@ -21,9 +24,9 @@ public class Database {
             .setSqlLogger(new Slf4JSqlLogger());
 
     /**
-     * Persist {@link Game} instance into the database using a {@see org.jdbi.v3.core.Jdbi} Object.
+     * Persist {Game} instance into the database by a { org.jdbi.v3.core.Jdbi} Object.
      *
-     * @param game {@link Game} instance to be persisted into the database.
+     * @param game {Game} instance to be persisted or stored into the database.
      */
     public static void persistGame(Game game){
         try { Class.forName("org.postgresql.Driver"); }catch (ClassNotFoundException e){ e.printStackTrace(); }
